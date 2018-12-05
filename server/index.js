@@ -3,11 +3,12 @@ const Koa = require('koa')
 const logger = require('koa-logger')
 
 // 自定义
-const router = require('./cross-domain')
+// const jsonpRouter = require('./cross-domain/jsonp')
+const corsRouter = require('./cross-domain/cors')
 
 const app = new Koa()
 
 app.use(logger())
-app.use(router.routes())
+app.use(corsRouter.routes())
 
 app.listen(8001)
