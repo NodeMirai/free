@@ -1,0 +1,11 @@
+{
+  "presets": [
+    ["@babel/preset-env", {
+      "targets": {
+        "browsers": [ "ie >= 8", "chrome >= 62" ],
+        "node": "8.10.0"
+      }      
+    }],
+    "react"
+  ]
+}
