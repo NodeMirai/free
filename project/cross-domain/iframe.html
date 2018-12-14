@@ -5,6 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+  <script type="text/javascript">
+    window.addEventListener('message', (e) => {
+      console.log('e.origin-----e.source', e.origin, e.source)
+      // window.parent.location = 'https://www.baidu.com'  
+      // -> iframe与其父页面不同域情况下，iframe可以改写parent的location，但不可读
+      console.log('window.parent', window.parent.location )
+    })
+  </script>
 </head>
 <body>
   i am iframe
