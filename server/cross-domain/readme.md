@@ -17,5 +17,11 @@
 
 - CORS preflight：只有非简单请求才会存在该行为  
   preflight请求为OPTIONS方法(仅用于查询资源信息而不做修改)，带有部分头信息提示server实际请求中会带有哪些http头，server端通过这些信息判断是否允许发送实际请求  
-3. 注意  
-preflight与实际请求中的头信息需要严格区别
+- 兼容性
+3. postMessage：使用postMessage可以在客户端的不同域中相互通信
+- 注意：
+- 兼容性
+4. document.domain
+两个域必须有相同的顶级域名前缀，然后将两个页的document.domain设置为相同顶级域名即为同域
+
+- 兼容性
