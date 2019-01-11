@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { bindActionCreators, createStore, applyMiddleware } from 'redux'
 import createSagaMiddleware from 'redux-saga' 
 import { connect, Provider } from 'react-redux' 
@@ -27,6 +28,7 @@ class App extends Component {
             <button onClick={() => {
               store.dispatch(action('INCREMENT_ASYNC', 2))
             }}>{number}</button>
+            <button><Link to="/hehe">Home</Link></button>  
         </div> 
     )
   }
@@ -39,8 +41,13 @@ const Rapp = connect(
   })
 )(App)
 
+const Index = () => <h2>Home</h2>;
+
 ReactDOM.render( 
-  <Provider store={store}>
-    <Rapp />
-  </Provider>
+  <Router>
+    <Provider store={store}>
+      <Route path="/" exact component={Rapp} />
+      <Route path="/hehe" exact component={Index} />
+    </Provider>
+  </Router>
   , container)
