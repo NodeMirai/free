@@ -9,6 +9,8 @@ import reducer from '../redux/reducer'
 import rootSaga from '../redux/saga'
 import action from '../redux/actionCreator'
 
+import Demo from './component/demo'
+
 const sagaMiddleware = createSagaMiddleware()
 const store = createStore(
   reducer,
@@ -28,7 +30,7 @@ class App extends Component {
             <button onClick={() => {
               store.dispatch(action('INCREMENT_ASYNC', 2))
             }}>{number}</button>
-            <button><Link to="/hehe">Home</Link></button>  
+            <button><Link to="/hehe"><Demo /></Link></button>  
         </div> 
     )
   }
