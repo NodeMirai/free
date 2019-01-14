@@ -22,6 +22,6 @@ class <%= PageName %> extends Component {
 
 export default <%= PageName %>
 ``````````
-#### 组件名获取
-#### 组件属性拼接
+#### 组件名获取
+#### 组件属性拼接
 #### 渲染页面模版
