@@ -10,7 +10,7 @@ const fs = require('fs')
 const parser = require('@babel/parser')
 const ejs = require('ejs')
 
-const demo = require('./model/demo')
+const demo = require('./component/demo/demo')
 
 // 读取组件文件，生成ast
 const componentCodeStr = fs.readFileSync('./component/demo/index.jsx')
