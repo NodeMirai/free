@@ -1,0 +1,19 @@
+import React, { Component } from 'react'
+<% if (importComponentList.length) { %>
+  <% importComponentList.forEach(function(name) { %>
+import <%= name %> from '<%= name %>'
+  <% }) %>
+<% } %>
+
+class <%= PageName %> extends Component {
+
+  render() {
+    return (
+      <div className='demo'>
+        <%- Component %>
+      </div>
+    )
+  }
+}
+
+export default <%= PageName %>
